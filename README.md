@@ -6,8 +6,9 @@ Giao diện được xây dựng dựa trên ảnh tham chiếu người dùng c
 Cấu trúc
 `index.html` — giao diện chính
 `css/style.css` — toàn bộ CSS, responsive + dark mode
-`js/data.js` — dữ liệu mẫu hội nghị
-`js/script.js` — tìm kiếm, lọc, modal chi tiết, dark mode
+`data/conference_data.json` — nguồn dữ liệu hội nghị dùng chung
+`js/script.js` — tải JSON, tìm kiếm, lọc, modal chi tiết, dark mode cho trang chính
+`js/app.js` — tải JSON, tìm kiếm, lọc ngày và sắp xếp cho trang tra cứu
 `assets/logo.svg` — logo SVG
 Chạy project
 Cách đơn giản nhất:
@@ -27,4 +28,5 @@ Nút từ khóa gợi ý
 Responsive cho laptop/tablet/mobile
 Dark mode và lưu trạng thái bằng LocalStorage
 Lưu ý
-Dữ liệu hội nghị trong `js/data.js` chỉ là dữ liệu demo giao diện. Khi làm đồ án thật, nên thay bằng dữ liệu từ CSDL/backend và hệ thống crawler/scraper của nhóm.
+Hai trang `index.html` và `search.html` đều đọc trực tiếp `data/conference_data.json`.
+Các trường không có trong JSON sẽ không được hiển thị. Hãy chạy bằng Live Server để trình duyệt cho phép JavaScript đọc file JSON.
